@@ -22,7 +22,7 @@ def preprocess(input:str):
     text_input = input.lower()
     text_input = text_input.replace('[^\w\s]', '')
     text_input_tokenized = nltk.word_tokenize(text_input)
-
+    
     stop_words = stopwords.words('english')
     text_input_tokenized = [item for item in text_input_tokenized if item not in stop_words]
     return text_input_tokenized
