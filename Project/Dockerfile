@@ -2,14 +2,15 @@
 
 FROM python:3.8
 
-#copy current folder . into our container folder /app
-COPY . /app
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
 
-WORKDIR /app 
+COPY . .
 
 #install all our requirements with pip install
 RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "python" ]
+EXPOSE 5000
 
-CMD [ "app.py" ]
+
+CMD [ "python", "app.py" ]
