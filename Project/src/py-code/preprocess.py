@@ -1,4 +1,4 @@
-import sys
+""import sys
 import string
 import nltk
 from nltk.corpus import stopwords
@@ -19,6 +19,7 @@ def expand_contractions(text):
 
 
 def preprocess(input:str):
+    """preprocess and tokenized the actual input"""
     text_input = input.lower()
     text_input = text_input.replace('[^\w\s]', '')
     text_input_tokenized = nltk.word_tokenize(text_input)
