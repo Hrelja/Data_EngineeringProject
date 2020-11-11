@@ -1,0 +1,24 @@
+<HTML>
+<BODY bgcolor="white">
+
+<form method="POST" action="">
+    <center>
+    <H1>Predict sentiment</H1> <br>
+    Sentence <input type = "text" name = "sentence" /> <br>
+    <input type="hidden" name="form_type" value="add_sentence"/>
+    <input type = "submit">
+    </center>
+</form>
+
+<br>
+<br>
+<center>
+<div id="result">
+    
+        {{ prediction_response }}
+
+</div>
+</center>
+
+</BODY>
+</HTML>
