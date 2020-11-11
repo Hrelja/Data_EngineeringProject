@@ -3,6 +3,7 @@ from nltk.corpus import stopwords
 import unidecode
 import string
 import contractions as cont
+import numpy as np
 
 #converted accent characters
 def remove_accented_chars(text):
@@ -24,6 +25,6 @@ def preprocess(input:str):
     text_input_tokenized = nltk.word_tokenize(text_input)
     
     stop_words = stopwords.words('english')
-    text_input_tokenized = [item for item in text_input_tokenized if item not in stop_words]
-    return text_input_tokenized
+    text_input_tokenized = [item for item in text_input_tokenized if item not in stop_words and item != np.nan]
+    return " ".join(text_input_tokenized)
 
