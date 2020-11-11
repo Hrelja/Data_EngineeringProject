@@ -1,6 +1,5 @@
 from re import X
 import joblib
-import pytest
 import model_building as mb
 import pandas as pd
 
