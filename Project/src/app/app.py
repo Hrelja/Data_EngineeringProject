@@ -5,7 +5,7 @@ import joblib
 
 app = Flask(__name__)
 
-pipeline = joblib.load('Project/src/model/pipeline.pkl')
+pipeline = joblib.load('src/model/pipeline.pkl')
 
 @app.route('/')
 def home():
